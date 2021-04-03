@@ -1,0 +1,23 @@
+name: Deploy
+
+on: [push, pull_request]
+
+jobs:
+  deploy_linux:
+    name: Deploy on Ubuntu 18.04
+    runs-on: ubuntu-18.04
+    steps:
+
+    - uses: actions/checkout@v2
+
+    - name: Install main dependencies
+      run: sudo apt-get install build-essential gcc-5 g++5 cmake make lcov gcovr
+
+    - name: Install third-party dependencies
+      run: sudo apt-get install doxygen graphviz texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+      
+  deploy_win:
+    name: Deploy on Windows
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
