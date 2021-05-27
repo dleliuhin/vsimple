@@ -12,6 +12,7 @@
 #ifndef VCOMPILER_TRAITS_H
 #define VCOMPILER_TRAITS_H
 
+#include "details/vplatform.h"
 #include "details/vendian.h"
 #include "details/vpretty_function.h"
 
