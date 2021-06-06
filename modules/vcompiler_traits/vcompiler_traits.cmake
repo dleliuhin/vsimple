@@ -10,11 +10,15 @@
 #########################################################################################
 # vcompiler_traits.cmake
 
+# \authors Alexander Gromtsev, Dmitrii Leliuhin
+# \date June 2021
+
 #========================================================================================
 
 if ( vcompiler_traits_included )
     return()
 endif()
+
 set( vcompiler_traits_included TRUE )
 
 #========================================================================================
@@ -23,11 +27,11 @@ message( STATUS "=== About include vcompiler_traits... ===" )
 
 include_directories( ${CMAKE_CURRENT_LIST_DIR} )
 
-set( HEADERS ${HEADERS} ${CMAKE_CURRENT_LIST_DIR}/vcompiler_traits.h         )
+list( APPEND V_HEADERS ${CMAKE_CURRENT_LIST_DIR}/vcompiler_traits.h )
 
-set( HEADERS ${HEADERS} ${CMAKE_CURRENT_LIST_DIR}/details/vplatform.h        )
-set( HEADERS ${HEADERS} ${CMAKE_CURRENT_LIST_DIR}/details/vendian.h          )
-set( HEADERS ${HEADERS} ${CMAKE_CURRENT_LIST_DIR}/details/vpretty_function.h )
+list( APPEND V_HEADERS ${CMAKE_CURRENT_LIST_DIR}/details/vplatform.h )
+list( APPEND V_HEADERS ${CMAKE_CURRENT_LIST_DIR}/details/vendian.h )
+list( APPEND V_HEADERS ${CMAKE_CURRENT_LIST_DIR}/details/vpretty_function.h )
 
 message( STATUS "=== vcompiler_traits included ===" )
 

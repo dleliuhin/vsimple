@@ -1,8 +1,8 @@
-# \authors Alexander Gromtsev, Dmitrii Leliuhin
+# \authors Dmitrii Leliuhin
 # \date June 2021
 
 #========================================================================================
 
-include( ${CMAKE_CURRENT_LIST_DIR}/../modules/vcompiler_traits/vcompiler_traits.cmake )
+include( ${CMAKE_CURRENT_LIST_DIR}/vcompiler_traits.cmake )
 
 #========================================================================================
