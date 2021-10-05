@@ -24,7 +24,7 @@ set( CMAKE_EXPORT_COMPILE_COMMANDS ON )
 
 include_directories( ${CMAKE_SOURCE_DIR} )
 
-include( ${CMAKE_CURRENT_SOURCE_DIR}/all.cmake )
+include( ${CMAKE_CURRENT_LIST_DIR}/all.cmake )
 
 #========================================================================================
 

@@ -3,6 +3,6 @@
 
 #========================================================================================
 
-include( ${CMAKE_CURRENT_LIST_DIR}/vcompiler_traits.cmake )
+include( ${CMAKE_CURRENT_LIST_DIR}/cmake/vcompiler_traits.cmake )
 
 #========================================================================================
