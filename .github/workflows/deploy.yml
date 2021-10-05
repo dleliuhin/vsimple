@@ -11,10 +11,19 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Install main dependencies
-      run: sudo apt-get install build-essential gcc-5 g++5 cmake make lcov gcovr
+      run: ./scripts/install.sh
 
     - name: Install third-party dependencies
-      run: sudo apt-get install doxygen graphviz texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+      run: ./scripts/install-third-party.sh
+
+    - name: Build library
+      run: ./scripts/install.sh
+
+    - name: Run Unit tests
+      run: ./scripts/test.sh
+
+    - name: Documentation
+      run: ./scripts/doc.sh
       
   deploy_win:
     name: Deploy on Windows
